@@ -1,5 +1,6 @@
 # Create S3 bucket to store plan and plan outputs
-aws s3api create-bucket --acl private --bucket xtages-terraform-pipeline
+BUCKET_NAME=bucket-name-here
+aws s3api create-bucket --acl private --bucket $BUCKET_NAME
 
 # login to ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS \
