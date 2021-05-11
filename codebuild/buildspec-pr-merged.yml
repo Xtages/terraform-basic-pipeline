@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - mkdir /tmp/merge
-      - aws s3 cp s3://xtages-terraform-pipeline/$CODEBUILD_SOURCE_VERSION/plan/plan-out .
+      - aws s3 cp s3://$BUCKET_NAME/$CODEBUILD_SOURCE_VERSION/plan/plan-out .
       - terraform init
       - terraform apply -auto-approve -no-color plan-out 2>&1 | tee /tmp/merge/apply-result
       - aws s3 cp /tmp/merge/apply-result s3://$BUCKET_NAME/$CODEBUILD_SOURCE_VERSION/merge/
