@@ -1,6 +1,6 @@
 # Terraform basic pipeline
 
-This repository doesn't intend to be self-explanatory. You can find the original post in [URL]
+This repository doesn't intend to be self-explanatory. You can find the original post in http://xtages.com/blog/posts/terraform-basic-pipeline
 
 ## AWS CLI 
 This directory contains a script that will create some of the resources in AWS that are mentioned in the blog.
